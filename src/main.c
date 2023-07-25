@@ -7,6 +7,8 @@
 
 #include "openFile.h"
 
+short sortFile(char *buffer);
+
 static void help(void)
 {
     printf("USAGE:\n\t"
@@ -25,22 +27,22 @@ static short myStrcmp(char *s1, char *s2)
     return 0;
 }
 
-static void swap(int *a, int *b)
-{
-    int c = *a;
+// static void swap(int *a, int *b)
+// {
+//     int c = *a;
 
-    *a = *b;
-    *b = c;
-}
+//     *a = *b;
+//     *b = c;
+// }
 
-static void bubbleSort(int *a, int *b)
-{
-    if (*a < *b || *a == *b) {
-        return;
-    } else {
-        swap(a, b);
-    }
-}
+// static void bubbleSort(int *a, int *b)
+// {
+//     if (*a < *b || *a == *b) {
+//         return;
+//     } else {
+//         swap(a, b);
+//     }
+// }
 
 int main(int ac, char **av)
 {
@@ -56,5 +58,5 @@ int main(int ac, char **av)
     }
     filepath = av[1];
     open_file(filepath, &buffer);
-	return 0;
+	return sortFile(buffer);
 }

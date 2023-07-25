@@ -9,6 +9,7 @@ CC	=	gcc
 
 SRC_MAIN	=	src/main.c	\
 				src/open_file.c	\
+				src/sortFile.c	\
 
 NAME_MAIN	=	sortFile
 
